@@ -4,7 +4,8 @@
 Created by Serge Kravchenko (group of students "November").<br>
 ##
 **Task**<br>
-Program a model of an island with variable parameters, consisting of an array of locations (for example, 100x20 cells).<br> 
+Program a model of an island with variable parameters, consisting of an array of locations <br>
+(for example, 100x20 cells).<br> 
 The locations will be filled with vegetation and animals.<br> 
 
 **Animals can:**<br>
