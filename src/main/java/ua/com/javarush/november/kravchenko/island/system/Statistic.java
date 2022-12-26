@@ -24,7 +24,7 @@ public class Statistic implements Runnable {
     }
 
     public void printInfo() {
-        Logger.log("==================================================");
+        Logger.log("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
         Logger.logSameLine("Count of predators: " + island.getCountPredators());
         Logger.logSameLine(", Count of herbivores: " + island.getCountHerbivores());
         Logger.log(", Total: " + island.getCountAnimals());

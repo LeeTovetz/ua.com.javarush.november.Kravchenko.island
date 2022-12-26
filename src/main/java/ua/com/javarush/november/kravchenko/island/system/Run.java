@@ -40,7 +40,7 @@ public class Run {
         executorLifeCycle.shutdown();
         executorStat.shutdown();
         executorPlantGrowth.shutdown();
-        Logger.log("==================================================");
-        Logger.log("GAME OVER");
+        Logger.log("*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
+        Logger.log("*** GAME OVER ***");
     }
 }
