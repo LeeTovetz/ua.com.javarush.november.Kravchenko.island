@@ -3,19 +3,19 @@ package ua.com.javarush.november.kravchenko.island.system;
 import ua.com.javarush.november.kravchenko.island.entities.island.Location;
 import ua.com.javarush.november.kravchenko.island.entities.organisms.plant.Plant;
 
-public class PlantGrowth implements Runnable {
+public class PlantGrow implements Runnable {
     private final Location location;
 
-    public PlantGrowth(Location location) {
+    public PlantGrow(Location location) {
         this.location = location;
     }
 
     @Override
     public void run() {
-        growth();
+        grow();
     }
 
-    public void growth() {
+    public void grow() {
         int currentCountPlants = location.getPlants().size();
         int maxCount = location.getMaxOnOneLocation(Plant.class);
         int plantRandomCount = location.getRandomCount(maxCount);

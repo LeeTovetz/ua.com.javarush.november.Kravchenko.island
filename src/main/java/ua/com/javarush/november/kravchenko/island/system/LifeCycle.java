@@ -16,10 +16,10 @@ public class LifeCycle implements Runnable {
     public void run() {
         location.getLock().lock();
         try {
-            location.eating();
-            location.breeding();
-            location.moving(island.getLocations());
-            location.dying();
+            location.eat();
+            location.reproduce();
+            location.move(island.getLocations());
+            location.die();
         } finally {
             location.getLock().unlock();
         }

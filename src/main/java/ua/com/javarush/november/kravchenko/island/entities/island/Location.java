@@ -37,7 +37,7 @@ public class Location {
         Collections.shuffle(herbivores);
     }
 
-    public void eating() {
+    public void eat() {
         for (int i = 0; i < predators.size(); i++) {
             predators.get(i).eat(herbivores, this);
         }
@@ -49,12 +49,12 @@ public class Location {
         }
     }
 
-    public void moving(Location[][] locations) {
+    public void move(Location[][] locations) {
         predators.removeIf(predator -> predator.move(this, locations));
         herbivores.removeIf(herbivore -> herbivore.move(this, locations));
     }
 
-    public void breeding() {
+    public void reproduce() {
         for (int i = 0; i < predators.size(); i++) {
             if (predators.get(i).breed(this)) {
                 predators.add(predators.get(i));
@@ -69,7 +69,7 @@ public class Location {
         getHerbivores().forEach(herbivore -> herbivore.setBreed(false));
     }
 
-    public void dying() {
+    public void die() {
         predators.removeIf(predator -> predator.die(this));
         herbivores.removeIf(herbivore -> herbivore.die(this));
     }

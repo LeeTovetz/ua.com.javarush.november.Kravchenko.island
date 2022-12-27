@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
-public class PropertiesReader {
+public class PropertyReader {
 
-    private PropertiesReader() {
+    private PropertyReader() {
     }
 
     public static int getProperty(String parameter) {

@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Run {
     public static void RunApp() {
-        int length = PropertiesReader.getProperty("length");
-        int width = PropertiesReader.getProperty("width");
+        int length = PropertyReader.getProperty("length");
+        int width = PropertyReader.getProperty("width");
 
         Logger.log("Game Start. Island size: " + length + " X " + width);
 
@@ -27,7 +27,7 @@ public class Run {
             for (int j = 0; j < island.getLocations()[i].length; j++) {
                 Location location = island.getLocations()[i][j];
                 executorLifeCycle.scheduleWithFixedDelay(new LifeCycle(location, island), 2, 1, TimeUnit.SECONDS);
-                executorPlantGrowth.scheduleWithFixedDelay(new PlantGrowth(location), 3, 3, TimeUnit.SECONDS);
+                executorPlantGrowth.scheduleWithFixedDelay(new PlantGrow(location), 3, 3, TimeUnit.SECONDS);
             }
         }
 
